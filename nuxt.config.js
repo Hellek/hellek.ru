@@ -46,3 +46,24 @@ export default {
 	build: {
 	},
 }
+
+// import { resolve } from 'path'
+
+/* export default {
+	alias: {
+		// ScssVariables: resolve(__dirname, 'assets/styles/variables.scss'),
+		// Assets: resolve(__dirname, 'assets/'),
+		// Static: resolve(__dirname, 'static/'),
+		Images: resolve(__dirname, 'assets/images/'),
+		// Styles: resolve(__dirname, 'assets/styles/'),
+		// Components: resolve(__dirname, 'components/'),
+		// Helpers: resolve(__dirname, 'helpers/'),
+		// Mixins: resolve(__dirname, 'mixins/'),
+		// Pages: resolve(__dirname, 'pages/'),
+		// Plugins: resolve(__dirname, 'plugins/'),
+		// Utils: resolve(__dirname, 'utils/'),
+	},
+	eslint: {
+		fix: true,
+	},
+} */

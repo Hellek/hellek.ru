@@ -6,6 +6,30 @@
 			"@/*": ["./*"],
 			"~~/*": ["./*"],
 			"@@/*": ["./*"],
+			"Images/*": [
+				"./assets/images/*"
+			],
+			"Styles/*": [
+				"./assets/styles/*"
+			],
+			"Components/*": [
+				"./components/*"
+			],
+			"Helpers/*": [
+				"./helpers/*"
+			],
+			"Mixins/*": [
+				"./mixins/*"
+			],
+			"Pages/*": [
+				"./pages/*"
+			],
+			"Plugins/*": [
+				"./plugins/*"
+			],
+			"Utils/*": [
+				"./utils/*"
+			],
 		}
 	},
 	"exclude": [
