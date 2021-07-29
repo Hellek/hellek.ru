@@ -1,3 +1,28 @@
+const htmlElementContentNewlineIgnoresList = [
+	'pre',
+	'textarea',
+	'template',
+	'el-col',
+	'el-button',
+	'el-tag',
+	'el-radio',
+	'el-radio-button',
+	'el-checkbox',
+	'el-checkbox-button',
+	'router-link',
+	'a',
+	'em',
+	'i',
+	'label',
+	'small',
+	'span',
+	'strong',
+	'sub',
+	'sup',
+	'th',
+	'td',
+]
+
 module.exports = {
 	root: true,
 	env: {
@@ -10,32 +35,13 @@ module.exports = {
 	extends: [
 		'@nuxtjs',
 		'plugin:nuxt/recommended',
+		'plugin:vue/recommended',
 	],
 	rules: {
-		'no-tabs': [
-			'error',
-			{
-				allowIndentationTabs: true,
-			},
-		],
-		indent: [
-			'error',
-			'tab',
-		],
 		'vue/html-indent': [
 			'error',
 			'tab',
 			{},
-		],
-		'comma-dangle': [
-			'error',
-			{
-				arrays: 'always-multiline',
-				objects: 'always-multiline',
-				imports: 'always-multiline',
-				exports: 'always-multiline',
-				functions: 'ignore',
-			},
 		],
 		'vue/html-closing-bracket-spacing': [
 			'error',
@@ -43,11 +49,22 @@ module.exports = {
 				selfClosingTag: 'never',
 			},
 		],
-		/*
 		'vue/max-attributes-per-line': [
 			'error',
 			{
 				singleline: 2,
+			},
+		],
+		'vue/multiline-html-element-content-newline': [
+			'error',
+			{
+				ignores: htmlElementContentNewlineIgnoresList,
+			},
+		],
+		'vue/singleline-html-element-content-newline': [
+			'error',
+			{
+				ignores: htmlElementContentNewlineIgnoresList,
 			},
 		],
 		'max-len': 'off',
@@ -72,6 +89,16 @@ module.exports = {
 			'error',
 			'as-needed',
 		],
+		indent: [
+			'error',
+			'tab',
+		],
+		'no-tabs': [
+			'error',
+			{
+				allowIndentationTabs: true,
+			},
+		],
 		quotes: [
 			'error',
 			'single',
@@ -95,10 +122,17 @@ module.exports = {
 				allowForLoopAfterthoughts: true,
 			},
 		],
-		'eol-last': [
-			'warn',
-			'never',
+		'comma-dangle': [
+			'error',
+			{
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'always-multiline',
+				exports: 'always-multiline',
+				functions: 'ignore',
+			},
 		],
+		'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
 		'newline-per-chained-call': [
 			'error',
 			{
@@ -111,10 +145,5 @@ module.exports = {
 				max: 2,
 			},
 		],
-		'import/extensions': 'off',
-		// TODO временный багфикс. Валит сборку, локально не воспроизводится
-		'import/no-extraneous-dependencies': 'off',
-		'import/prefer-default-export': 'off',
-		*/
 	},
 }

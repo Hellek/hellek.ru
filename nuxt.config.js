@@ -1,3 +1,7 @@
+// import jsconfig from './jsconfig.json'
+
+// console.log(jsconfig.compilerOptions)
+
 export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: 'static',
@@ -44,6 +48,10 @@ export default {
 	},
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
+		// extend(config) {
+		// config.resolve.alias['~src'] = projectSrc
+		// config.resolve.alias['~utils'] = path.join(projectSrc, 'utils')
+		// }
 	},
 }
 
